@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucak Engelliler Derneği</title>
+    <style>
+        /* Genel Stil */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #004d99;
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+    .logo-img {
+    width: 45px;
+    height: 45px; /* Görselin yüksekliğini aynı genişlikle yaparak yuvarlak hale getiriyoruz */
+    border-radius: 50%; /* Görseli yuvarlak yapar */
+    object-fit: cover; /* Görselin orantısız büyümesini engeller, en iyi şekilde sığdırır */
+    margin-right: 10px; /* Sağ tarafta boşluk bırakır */
+}
+
+        .logo h1 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-transform: uppercase;
+        }
+
+        /* Sekme Menüsü */
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .tab-menu button {
+            background-color: #ffffff;
+            color: #004d99;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .tab-menu button:hover {
+            background-color: #ffcc00;
+            color: #fff;
+        }
+
+        .tab-menu button.active {
+            background-color: #ffcc00;
+            color: #fff;
+        }
+
+        /* Sekme İçeriği */
+        .tab-content {
+            display: none;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            background: linear-gradient(135deg, #0066cc, #004d99);
+            color: white;
+            padding: 80px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: relative; 
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Tasarım */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .tab-menu button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+        .image-slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .image-slider img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        /* Kaydırıcı Kapsayıcı */
+        .image-slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Resimler */
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .image-slider img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+
+        /* Kaydırıcı Butonları */
+        .image-slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .image-slider .prev {
+            left: 10px;
+        }
+
+        .image-slider .next {
+            right: 10px;
+        }
+    /* İletişim Bilgileri */
+.contact-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #004d99;
+    font-weight: bold;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.contact-info p strong {
+    color: #004d99;
+}
+
+.contact-info a {
+    color: #004d99;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffcc00;
+}
+    img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* İsteğe bağlı, görsellerin en fazla bu genişlikte olmasını sağlar */
+}
+    /* Kaydırıcı Kapsayıcı */
+.image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 5px;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image-slider img {
+    width: 100%;
+    max-width: 500px; /* Resimlerin genişliğini buradan ayarlayabilirsiniz */
+    height: auto;
+}
+
+/* Kaydırıcı Butonları */
+.image-slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.image-slider .prev {
+    left: 10px;
+}
+
+.image-slider .next {
+    right: 10px;
+}
+    /* Kayan Yazı Alanı */
+.caption-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.caption-container span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 8s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Başlık ve Navbar -->
+    <header>
+        <div class="logo">
+            <!-- Logo Görseli Ekleme -->
+            <img src="Logo.jpg" alt="Logo" class="logo-img">
+            <h1>Bucak Engelliler Derneği</h1>
+        </div>
+    </header>
+
+    <!-- Sekme Menüsü -->
+    <div class="tab-menu">
+        <button class="tab-link active" onclick="openTab(event, 'home')">Ana Sayfa</button>
+        <button class="tab-link" onclick="openTab(event, 'about')">Hakkımızda</button>
+        <button class="tab-link" onclick="openTab(event, 'contact')">İletişim</button>
+    </div>
+
+    <!-- Sekme İçerikleri -->
+    <div id="home" class="tab-content active">
+<!-- Ana Sayfa İçeriği -->
+<div class="image-slider" id="slider1">
+    <button class="prev" onclick="moveSlide(-1, 'slider1')">&#60;&#60;</button>
+    <div class="slider-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQCQTEwVZyQ6VxlEED-DtSyBrkuj8_-Wkan3dfUXSJq7PApliufUxmwU&s=10" alt="Görsel 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgytvhSq1dlc_XlurQjaJ2ZUt2T6qb9nvC1PqYjO3mY_EYTVocUq8bhh8&s=10" alt="Görsel 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScjzFA92SGl-fnqtw3sXvxHKs9KDDpbbGcov0GzKbtpTs5AWCLlN_kc6Q&s=10" alt="Görsel 3">
+    </div>
+    <button class="next" onclick="moveSlide(1, 'slider1')">&#62;&#62;</button>
+</div>
+<marquee>Hamuriși satıșı yapmaktayız.</marquee>
+
+<!-- El İşleri Kaydırıcı -->
+<div class="image-slider" id="slider2">
+    <button class="prev" onclick="moveSlide(-1, 'slider2')">&#60;&#60;</button>
+    <div class="slider-container">
+        <img src="5.jpg" alt="El İşi 1">
+        <img src="6.jpg" alt="El İşi 2">
+        <img src="9.jpg" alt="El İşi 3">
+        <img src="10.jpg" alt="El İşi 1">
+        <img src="11.jpg" alt="El İşi 2">
+        <img src="0.jpg" alt="El İşi 3">
+    </div>
+    <button class="next" onclick="moveSlide(1, 'slider2')">&#62;&#62;</button>
+</div>
+<marquee>Bireylerin kaliteli vakit geçirmesi ve maddi kazanç sağlamalarında destek oluyoruz.</marquee>
+        <body>
+  <body>
+</body>
+  </div>
+</body>
+    </div>
+
+   <div id="about" class="tab-content">
+    <section class="hero">
+        <h2>Engelli Bireylerin Yanındayız</h2>
+        <p>Bucak Engelliler Derneği olarak, engelli bireylerin toplumsal hayata tam katılımını desteklemeyi ve yaşam kalitelerini artırmayı hedefliyoruz. Derneğimiz, engelli bireylerin eğitim, sağlık, rehabilitasyon ve sosyal entegrasyon süreçlerinde onlara yönelik çeşitli projeler ve etkinlikler düzenlemektedir. Toplumda farkındalık yaratmak, engelli bireylerin haklarını savunmak ve yaşamlarını daha iyi hale getirmek amacıyla çalışmalar yapıyoruz.</p>
+
+        <!-- Dernek Resimleri -->
+        <div class="image-gallery">
+            <img src="1.jpg" alt="Dernek Etkinliği 1">
+            <img src="3.jpg" alt="Dernek Etkinliği 2">
+            <img src="7.jpg" alt="Dernek Etkinliği 3">
+        </div>
+    </section>
+</div>
+
+    <div id="contact" class="tab-content">
+        <section>
+            <!-- Google Maps Entegrasyonu -->
+            <div class="map-container">
+                <h3>Adresimiz : </h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450964402!2d144.95565121550402!3d-37.81732797975162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f0b1d671%3A0x5045675218ce7e33!2sBucak%2C%20Burdur!5e0!3m2!1str!2str!4v1634762425826!5m2!1str!2str" 
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+            <!-- İletişim Bilgileri -->
+            <div class="contact-info">
+                <p><strong>Başkan:</strong> Mehmet Öztop - 0536 990 81 70</p>
+                <p><strong>Başkan Yardımcısı:</strong> Halil Demirel - 0542 787 58 39</p>
+                <p><strong>Site Kurucusu:</strong> Muhammed Can Yüce - 0551 044 61 46</p>
+                <p><strong>E-posta:</strong> info@engellidernegi.org</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bucak Engelliler Derneği - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+        // Sekme açma fonksiyonu
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Resim kaydırıcı fonksiyonları
+        var slideIndex = 0;
+
+        function moveSlide(n) {
+            slideIndex += n;
+            var slides = document.querySelectorAll('.image-slider img');
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            document.querySelector('.slider-container').style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        }
+var slideIndex = 0;
+
+var slideIndex1 = 0;
+var slideIndex2 = 0;
+
+function moveSlide(n, sliderId) {
+    var slides;
+    if (sliderId === 'slider1') {
+        slides = document.querySelectorAll('#' + sliderId + ' .slider-container img');
+        slideIndex1 += n;
+        if (slideIndex1 >= slides.length) {
+            slideIndex1 = 0;
+        } else if (slideIndex1 < 0) {
+            slideIndex1 = slides.length - 1;
+        }
+        document.querySelector('#' + sliderId + ' .slider-container').style.transform = 'translateX(' + (-slideIndex1 * 100) + '%)';
+    } else if (sliderId === 'slider2') {
+        slides = document.querySelectorAll('#' + sliderId + ' .slider-container img');
+        slideIndex2 += n;
+        if (slideIndex2 >= slides.length) {
+            slideIndex2 = 0;
+        } else if (slideIndex2 < 0) {
+            slideIndex2 = slides.length - 1;
+        }
+        document.querySelector('#' + sliderId + ' .slider-container').style.transform = 'translateX(' + (-slideIndex2 * 100) + '%)';
+    }
+}
+    </script>
+
+</body>
+</html>
