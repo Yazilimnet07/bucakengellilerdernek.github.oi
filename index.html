@@ -54,26 +54,27 @@
         .tab-menu {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 5px;
             background-color: #ffffff;
-            border-radius: 30px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: -10px;
         }
 
         .tab-menu button {
-            background-color: #ffffff;
-            color: #004d99;
-            padding: 12px 24px;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            margin: 5px;
-        }
+    background-color: #ffffff;
+    color: #004d99;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin: 5px;
+    width: 200px; /* Sabit genişlik belirledik */
+}
 
         .tab-menu button:hover {
             background-color: #ffcc00;
@@ -88,7 +89,7 @@
         /* Sekme İçeriği */
         .tab-content {
             display: none;
-            padding: 40px 20px;
+            padding: 15px 20px;
             text-align: center;
         }
 
@@ -100,7 +101,7 @@
         .hero {
             background: linear-gradient(135deg, #0066cc, #004d99);
             color: white;
-            padding: 80px 20px;
+            padding: 100px 20px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -133,14 +134,14 @@
         /* Responsive Tasarım */
         @media (max-width: 768px) {
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 1.5rem;
             }
             .hero p {
                 font-size: 1rem;
             }
             .tab-menu button {
                 font-size: 1rem;
-                padding: 10px 20px;
+                padding: 5px 1px;
             }
         }
 
@@ -317,8 +318,113 @@
     100% {
         transform: translateX(-100%);
        }
-} 
+}
+    .advertisement {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+.advertisement a {
+    color: #004d99;
+    font-weight: bold;
+    text-decoration: none;
+}
+.advertisement a:hover {
+    color: #ffcc00;
+}
+        
+h2 {
+    font-size: 1.8rem; /* Başlık boyutu */
+    color: #004d99; /* Yazı rengi */
+    text-align: center; /* Ortalama */
+    background-color: #ffcc00; /* Arka plan rengi */
+    padding: 10px; /* İç boşluk */
+    border-radius: 10px; /* Köşeleri yuvarlama */
+    margin-bottom: 15px; /* Alt boşluk */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    text-transform: uppercase; /* Büyük harf */
+    font-weight: bold; /* Kalın yazı */
+}
+.reklam-container {
+    margin: 8px auto; /* Ortala, daha küçük dış boşluk */
+    padding: 16px; /* İç boşluk artırıldı */
+    text-align: center; /* Yazıları ortala */
+    background-color: #ffeb3b; /* Sarı ton */
+    border: 1px solid #e0e0e0; /* İnce gri çerçeve */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    margin-top: 30px; /* Üst boşluk */
+    width: 340px; /* Sabit genişlik */
+    height: 250px; /* Sabit yükseklik ile kare form */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Yumuşak animasyon */
+}
 
+.reklam-container:hover {
+    transform: translateY(-3px); /* Hoverda çok hafif yukarı kayma */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Hoverda hafif gölge büyümesi */
+}
+
+.reklam-container h2 {
+    font-family: 'Arial', sans-serif; /* Modern font */
+    font-size: 1.2rem; /* Başlık boyutu */
+    color: #333; /* Başlık rengi */
+    margin-bottom: 2px; /* Başlık ve içerik arasına boşluk */
+}
+
+.reklam-container p {
+    font-family: 'Roboto', sans-serif; /* Okunabilir font */
+    font-size: 0.9rem; /* Yazı boyutu */
+    color: #555; /* Metin rengi */
+    line-height: 1.4; /* Satır aralığı */
+}
+.reklam-container .advertisement {
+    margin-bottom: 5px; /* Alt boşluk */
+}
+.reklam-alani h3 {
+        cursor: pointer;
+        background-color: #ffff;
+        color: #333;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    .reklam-alani h3:hover {
+        background-color: #ffff;
+    }
+
+    #reklam-icerik {
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 5px;
+        border-top: 1px solid #ddd;
+        transition: max-height 0.5s ease;
+    }
+    .reklam-alani {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #ffff;
+}
+
+.reklam-alani h3 {
+    margin: 0;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.reklam-alani .telefon {
+    font-weight: bold;
+    color: #555;
+}
+    
     </style>
 </head>
 <body>
@@ -336,9 +442,23 @@
         <button class="tab-link active" onclick="openTab(event, 'home')">Ana Sayfa</button>
         <button class="tab-link" onclick="openTab(event, 'about')">Hakkımızda</button>
         <button class="tab-link" onclick="openTab(event, 'contact')">İletişim</button>
+        <button class="tab-link" onclick="openTab(event, 'advertisement')">Reklamlar</button>
     </div>
-
+ 
     <!-- Sekme İçerikleri -->
+<div id="advertisement" class="tab-content">
+    <!-- Reklam Alanı -->
+<div class="reklam-alani">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLDzlSQJ6s4D8rwZb1Xo6IlLW0AseuH6tF95x7Rdp8-3R82GAIoTWuAyA&s=10"
+    <h3 onclick="toggleContent()">Ev Yapımı Mantı </h3>
+    <div id="reklam-icerik" style="display: none;">
+        <p>Taptaze, özenle hazırlanmış ev yapımı mantı için bizimle iletişime geçin. Her lokmada geleneksel lezzeti hissedin!</p>
+        <p><span class="telefon">0533 549 1410</span> - Duran Yılmaz</p>
+        <p><span class="telefon">0553 573 0012</span> - Fatma Yılmaz</p>
+    </div>
+</div>
+</div>
+
     <div id="home" class="tab-content active">
 <!-- Ana Sayfa İçeriği -->
 <div class="image-slider" id="slider1">
@@ -351,7 +471,6 @@
     <button class="next" onclick="moveSlide(1, 'slider1')">&#62;&#62;</button>
 </div>
 <marquee>Hamuriși satıșı yapmaktayız.</marquee>
-
 <!-- El İşleri Kaydırıcı -->
 <div class="image-slider" id="slider2">
     <button class="prev" onclick="moveSlide(-1, 'slider2')">&#60;&#60;</button>
@@ -370,6 +489,7 @@
   <body>
 </body>
   </div>
+        
 </body>
     </div>
 
@@ -406,6 +526,9 @@
             </div>
         </section>
     </div>
+
+    </div>
+</div>
 
     <!-- Footer -->
     <footer>
@@ -468,7 +591,25 @@ function moveSlide(n, sliderId) {
         document.querySelector('#' + sliderId + ' .slider-container').style.transform = 'translateX(' + (-slideIndex2 * 100) + '%)';
     }
 }
+function toggleContent() {
+        var content = document.getElementById("reklam-icerik");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
     </script>
+<script>
+    function toggleContent() {
+        const content = document.getElementById("reklam-icerik");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
 
+</script>
 </body>
 </html>
