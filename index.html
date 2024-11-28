@@ -151,13 +151,14 @@
             align-items: center;
             max-width: 100%;
             overflow: hidden;
+            height: 250px;
         }
 
-        .image-slider img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-        }
+        .image-slider {
+    width: auto; /* Görsel boyutuna göre otomatik genişlik */
+    max-width: 100%; /* Ekrana sığmasını sağlar */
+    height: 250px;
+}
 
         /* Kaydırıcı Kapsayıcı */
         .image-slider {
@@ -166,7 +167,7 @@
             align-items: center;
             overflow: hidden;
             width: 100%;
-            max-width: 600px;
+            max-width: 250px;
             margin: 0 auto;
             position: relative;
         }
@@ -178,10 +179,12 @@
         }
 
         .image-slider img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-        }
+    width: 100%;
+    max-width: 560px; /* YouTube'un varsayılan genişliği */
+    height: auto; /* Oranı korumak için yükseklik otomatik */
+    aspect-ratio: 16 / 9; /* Modern tarayıcılar için */
+    object-fit: cover; /* Görselin taşmasını önler */
+}
 
         /* Kaydırıcı Butonları */
         .image-slider button {
@@ -263,9 +266,9 @@
     transition: transform 0.5s ease;
 }
 
-.image-slider img {
-    width: 100%;
-    max-width: 500px; /* Resimlerin genişliğini buradan ayarlayabilirsiniz */
+.image-slider {
+    width: auto; /* Görsel boyutuna göre otomatik genişlik */
+    max-width: 100%; /* Ekrana sığmasını sağlar */
     height: auto;
 }
 
@@ -464,9 +467,14 @@ h2 {
 <div class="image-slider" id="slider1">
     <button class="prev" onclick="moveSlide(-1, 'slider1')">&#60;&#60;</button>
     <div class="slider-container">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQCQTEwVZyQ6VxlEED-DtSyBrkuj8_-Wkan3dfUXSJq7PApliufUxmwU&s=10" alt="Görsel 1">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgytvhSq1dlc_XlurQjaJ2ZUt2T6qb9nvC1PqYjO3mY_EYTVocUq8bhh8&s=10" alt="Görsel 2">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScjzFA92SGl-fnqtw3sXvxHKs9KDDpbbGcov0GzKbtpTs5AWCLlN_kc6Q&s=10" alt="Görsel 3">
+        <img src="14.jpg" alt="Görsel 3">
+        <img src="18.jpg" alt="Görsel 6">
+        <img src="19.jpg" alt="Görsel 7">
+        <img src="20.jpg" alt="Görsel 8">
+        <img src="23.jpg" alt="Görsel 9">
+        <img src="38.jpg" alt="Görsel 11">
+        <img src="40.jpg" alt="Görsel 12">
+        <img src="43.jpg" alt="Görsel 13">
     </div>
     <button class="next" onclick="moveSlide(1, 'slider1')">&#62;&#62;</button>
 </div>
@@ -475,12 +483,22 @@ h2 {
 <div class="image-slider" id="slider2">
     <button class="prev" onclick="moveSlide(-1, 'slider2')">&#60;&#60;</button>
     <div class="slider-container">
-        <img src="5.jpg" alt="El İşi 1">
-        <img src="6.jpg" alt="El İşi 2">
-        <img src="9.jpg" alt="El İşi 3">
-        <img src="10.jpg" alt="El İşi 1">
-        <img src="11.jpg" alt="El İşi 2">
-        <img src="0.jpg" alt="El İşi 3">
+        <img src="0.jpg" alt="El İşi 1">
+        <img src="5.jpg" alt="El İşi 2">
+        <img src="6.jpg" alt="El İşi 3">
+        <img src="9.jpg" alt="El İşi 4">
+        <img src="10.jpg" alt="El İşi 5">
+        <img src="11.jpg" alt="El İşi 6">
+        <img src="16.jpg" alt="El İşi 7">
+        <img src="41.jpg" alt="El İşi 8">
+        <img src="47.jpg" alt="El İşi 9">
+        <img src="48.jpg" alt="El İşi 10">
+        <img src="49.jpg" alt="El İşi 11">
+        <img src="50.jpg" alt="El İşi 12">
+        <img src="51.jpg" alt="El İşi 13">
+        <img src="52.jpg" alt="El İşi 14">
+        <img src="53.jpg" alt="El İşi 15">
+        <img src="57.jpg" alt="El İşi 16">
     </div>
     <button class="next" onclick="moveSlide(1, 'slider2')">&#62;&#62;</button>
 </div>
@@ -501,8 +519,22 @@ h2 {
         <!-- Dernek Resimleri -->
         <div class="image-gallery">
             <img src="1.jpg" alt="Dernek Etkinliği 1">
-            <img src="3.jpg" alt="Dernek Etkinliği 2">
-            <img src="7.jpg" alt="Dernek Etkinliği 3">
+            <img src="2.jpg" alt="Dernek Etkinliği 2">
+            <img src="3.jpg" alt="Dernek Etkinliği 3">
+            <img src="7.jpg" alt="Dernek Etkinliği 4">
+            <img src="8.jpg" alt="Dernek Etkinliği 5">
+            <img src="21.jpg" alt="Dernek Etkinliği 6">
+            <img src="22.jpg" alt="Dernek Etkinliği 7">
+            <img src="26.jpg" alt="Dernek Etkinliği 8">
+            <img src="32.jpg" alt="Dernek Etkinliği 9">
+            <img src="33.jpg" alt="Dernek Etkinliği 10">
+            <img src="36.jpg" alt="Dernek Etkinliği 11">
+            <img src="44.jpg" alt="Dernek Etkinliği 12">
+            <img src="45.jpg" alt="Dernek Etkinliği 13">
+            <img src="46.jpg" alt="Dernek Etkinliği 14">
+            <img src="54.jpg" alt="Dernek Etkinliği 15">
+            <img src="55.jpg" alt="Dernek Etkinliği 16">
+            <img src="56.jpg" alt="Dernek Etkinliği 17">
         </div>
     </section>
    </div>
@@ -609,6 +641,10 @@ function toggleContent() {
             content.style.display = "none";
         }
     }
+function toggleContent() {
+    var content = document.getElementById('reklam-icerik');
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+}
 
 </script>
 </body>
