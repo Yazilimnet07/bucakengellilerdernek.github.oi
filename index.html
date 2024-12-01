@@ -2,8 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="zuWFeGUusgt9qtoCbLOW-I0Nx8Ar1FzhvuPG2WkPxHU" />
-    <meta <meta name="google-site-verification" content="zuWFeGUusgt9qtoCbLOW-I0Nx8Ar1FzhvuPG2WkPxHU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bucak Engelliler Derneği</title>
     <style>
         /* Genel Stil */
@@ -23,7 +22,7 @@
         /* Header */
         header {
             background: #004d99;
-            color: white;
+            color: red;
             padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -62,11 +61,11 @@
             margin-bottom: -10px;
         }
 
-        .tab-menu button {
+.tab-menu button {
     background-color: #ffffff;
     color: #004d99;
-    padding: 12px 24px;
-    font-size: 1rem;
+    padding: 5px 10px; /* Daha dengeli padding */
+    font-size: 0.8rem; /* Harflerin iç içe geçmesini önlemek için boyutu artırdık */
     border: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -74,7 +73,12 @@
     border-radius: 50px;
     transition: all 0.3s ease;
     margin: 5px;
-    width: 200px; /* Sabit genişlik belirledik */
+    width: auto; /* Sabit genişlik yerine içeriğe göre boyutlanır */
+    max-width: 150px; /* Maksimum genişlik belirledik */
+    white-space: nowrap; /* Yazının satır atlamasını engeller */
+    overflow: hidden; /* Taşmayı gizler */
+    text-overflow: ellipsis; /* Yazının sonuna "..." ekler */
+    letter-spacing: 0.05em; /* Harf aralığını artırdık */
 }
 
         .tab-menu button:hover {
@@ -102,43 +106,44 @@
         .hero {
             background: linear-gradient(135deg, #0066cc, #004d99);
             color: white;
-            padding: 100px 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px 1px;
+            border-radius: 5px;
+            box-shadow: 10 1px 5px rgba(0, 0, 0, 0.1);
         }
 
         .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2px;
+            margin-bottom: 10px;
         }
 
         .hero p {
-            font-size: 1rem;
-            margin-bottom: 5px;
+            font-size: 6rem;
+            margin-bottom: 110px;
         }
 
         /* Footer */
         footer {
             background-color: #222;
             color: #fff;
-            padding: 1rem;
-            text-align: center;
-            position: relative; 
-            font-size: 0.9rem;
-            z-index: 10;
+            padding: 10px;
+            text-align: 16px;
+            position: 50px; 
+            font-size: 1.9rem;
+            z-index: 25;
+            margin bottom: 15px;
         }
 
         footer p {
-            font-size: 0.8rem;
+            font-size: 0.1rem;
         }
 
         /* Responsive Tasarım */
         @media (max-width: 768px) {
             .hero h2 {
-                font-size: 1.5rem;
+                font-size: 1px;
             }
             .hero p {
-                font-size: 1rem;
+                font-size: 1px;
             }
             .tab-menu button {
                 font-size: 1rem;
@@ -447,6 +452,7 @@ h2 {
         <button class="tab-link" onclick="openTab(event, 'about')">Hakkımızda</button>
         <button class="tab-link" onclick="openTab(event, 'contact')">İletişim</button>
         <button class="tab-link" onclick="openTab(event, 'advertisement')">Reklamlar</button>
+        <button class="tab-link" onclick="openTab(event, 'news')">Haberler</button>
     </div>
  
     <!-- Sekme İçerikleri -->
@@ -536,6 +542,7 @@ h2 {
             <img src="54.jpg" alt="Dernek Etkinliği 15">
             <img src="55.jpg" alt="Dernek Etkinliği 16">
             <img src="56.jpg" alt="Dernek Etkinliği 17">
+            <img src="60.jpg" alt="Dernek Etkinliği 18">
         </div>
     </section>
    </div>
@@ -648,8 +655,5 @@ function toggleContent() {
 }
 
 </script>
-    <!-- 100% privacy-first analytics -->
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-
 </body>
 </html>
