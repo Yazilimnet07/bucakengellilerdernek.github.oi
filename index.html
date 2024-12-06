@@ -329,24 +329,7 @@
        }
 }
     .advertisement {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 5px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 5px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-}
-.advertisement a {
-    color: #004d99;
-    font-weight: bold;
-    text-decoration: none;
-}
-.advertisement a:hover {
-    color: #ffcc00;
-}
+
         
 h2 {
     font-size: 1.8rem; /* Başlık boyutu */
@@ -360,79 +343,7 @@ h2 {
     text-transform: uppercase; /* Büyük harf */
     font-weight: bold; /* Kalın yazı */
 }
-.reklam-container {
-    margin: 8px auto; /* Ortala, daha küçük dış boşluk */
-    padding: 16px; /* İç boşluk artırıldı */
-    text-align: center; /* Yazıları ortala */
-    background-color: #ffeb3b; /* Sarı ton */
-    border: 1px solid #e0e0e0; /* İnce gri çerçeve */
-    border-radius: 8px; /* Yuvarlak köşeler */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-    margin-top: 30px; /* Üst boşluk */
-    width: 340px; /* Sabit genişlik */
-    height: 250px; /* Sabit yükseklik ile kare form */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Yumuşak animasyon */
-}
 
-.reklam-container:hover {
-    transform: translateY(-3px); /* Hoverda çok hafif yukarı kayma */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Hoverda hafif gölge büyümesi */
-}
-
-.reklam-container h2 {
-    font-family: 'Arial', sans-serif; /* Modern font */
-    font-size: 1.2rem; /* Başlık boyutu */
-    color: #333; /* Başlık rengi */
-    margin-bottom: 2px; /* Başlık ve içerik arasına boşluk */
-}
-
-.reklam-container p {
-    font-family: 'Roboto', sans-serif; /* Okunabilir font */
-    font-size: 0.9rem; /* Yazı boyutu */
-    color: #555; /* Metin rengi */
-    line-height: 1.4; /* Satır aralığı */
-}
-.reklam-container .advertisement {
-    margin-bottom: 5px; /* Alt boşluk */
-}
-.reklam-alani h3 {
-        cursor: pointer;
-        background-color: #ffff;
-        color: #333;
-        padding: 5px;
-        border-radius: 5px;
-        margin: 0;
-    }
-
-    .reklam-alani h3:hover {
-        background-color: #ffff;
-    }
-
-    #reklam-icerik {
-        background-color: rgba(0, 0, 0, 0.05);
-        padding: 5px;
-        border-top: 1px solid #ddd;
-        transition: max-height 0.5s ease;
-    }
-    .reklam-alani {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #ffff;
-}
-
-.reklam-alani h3 {
-    margin: 0;
-    cursor: pointer;
-    color: #000000;
-    text-decoration: underline;
-}
-
-.reklam-alani .telefon {
-    font-weight: bold;
-    color: #555;
-}
     /* Kaydırıcı İçerik */
 .slider-container {
     position: relative;
@@ -441,19 +352,7 @@ h2 {
     overflow: hidden;
 }
 
-/* Resimler için kayma animasyonu */
-.slider-container img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease-in-out; /* Kayma animasyonu */
-}
 
-/* İlk slayt başlangıçta görünür */
-.slider-container img:first-child {
-    display: block;
-}
-    
     </style>
 </head>
 <body>
@@ -471,23 +370,7 @@ h2 {
         <button class="tab-link active" onclick="openTab(event, 'home')">Ana Sayfa</button>
         <button class="tab-link" onclick="openTab(event, 'about')">Hakkımızda</button>
         <button class="tab-link" onclick="openTab(event, 'contact')">İletişim</button>
-        <button class="tab-link" onclick="openTab(event, 'advertisement')">Reklamlar</button>
-        <button class="tab-link" onclick="openTab(event, 'news')">Haberler</button>
     </div>
- 
-    <!-- Sekme İçerikleri -->
-<div id="advertisement" class="tab-content">
-    <!-- Reklam Alanı -->
-<div class="reklam-alani">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLDzlSQJ6s4D8rwZb1Xo6IlLW0AseuH6tF95x7Rdp8-3R82GAIoTWuAyA&s=10"
-    <h3 onclick="toggleContent()">Ev Yapımı Mantı </h3>
-    <div id="reklam-icerik" style="display: none;">
-        <p>Taptaze, özenle hazırlanmış ev yapımı mantı için bizimle iletişime geçin. Her lokmada geleneksel lezzeti hissedin!</p>
-        <p><span class="telefon">0533 549 1410</span> - Duran Yılmaz</p>
-        <p><span class="telefon">0553 573 0012</span> - Fatma Yılmaz</p>
-    </div>
-</div>
-</div>
 
     <div id="home" class="tab-content active">
     <!-- Ana Sayfa İçeriği -->
@@ -673,21 +556,7 @@ function toggleContent() {
         }
     }
     </script>
-<script>
-    function toggleContent() {
-        const content = document.getElementById("reklam-icerik");
-        if (content.style.display === "none") {
-            content.style.display = "block";
-        } else {
-            content.style.display = "none";
-        }
-    }
-function toggleContent() {
-    var content = document.getElementById('reklam-icerik');
-    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-}
 
-</script>
 <script>
     let currentSlide = 0;
 
