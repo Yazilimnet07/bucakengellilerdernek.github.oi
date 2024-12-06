@@ -433,6 +433,26 @@ h2 {
     font-weight: bold;
     color: #555;
 }
+    /* Kaydırıcı İçerik */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Yükseklik ihtiyaca göre ayarlanabilir */
+    overflow: hidden;
+}
+
+/* Resimler için kayma animasyonu */
+.slider-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* Kayma animasyonu */
+}
+
+/* İlk slayt başlangıçta görünür */
+.slider-container img:first-child {
+    display: block;
+}
     
     </style>
 </head>
@@ -470,50 +490,63 @@ h2 {
 </div>
 
     <div id="home" class="tab-content active">
-<!-- Ana Sayfa İçeriği -->
-<div class="image-slider" id="slider1">
-    <button class="prev" onclick="moveSlide(-1, 'slider1')">&#60;&#60;</button>
-    <div class="slider-container">
-        <img src="14.jpg" alt="Görsel 3">
-        <img src="18.jpg" alt="Görsel 6">
-        <img src="19.jpg" alt="Görsel 7">
-        <img src="20.jpg" alt="Görsel 8">
-        <img src="23.jpg" alt="Görsel 9">
-        <img src="38.jpg" alt="Görsel 11">
-        <img src="40.jpg" alt="Görsel 12">
-        <img src="43.jpg" alt="Görsel 13">
+    <!-- Ana Sayfa İçeriği -->
+    <div class="image-slider" id="slider1">
+        <button class="prev" onclick="moveSlide(-1, 'slider1')">&#60;&#60;</button>
+        <div class="slider-container">
+            <img src="14.jpg" alt="Görsel 3">
+            <img src="18.jpg" alt="Görsel 6">
+            <img src="19.jpg" alt="Görsel 7">
+            <img src="20.jpg" alt="Görsel 8">
+            <img src="23.jpg" alt="Görsel 9">
+            <img src="38.jpg" alt="Görsel 11">
+            <img src="40.jpg" alt="Görsel 12">
+            <img src="43.jpg" alt="Görsel 13">
+        </div>
+        <button class="next" onclick="moveSlide(1, 'slider1')">&#62;&#62;</button>
     </div>
-    <button class="next" onclick="moveSlide(1, 'slider1')">&#62;&#62;</button>
-</div>
-<marquee>Hamuriși satıșı yapmaktayız.</marquee>
-<!-- El İşleri Kaydırıcı -->
-<div class="image-slider" id="slider2">
-    <button class="prev" onclick="moveSlide(-1, 'slider2')">&#60;&#60;</button>
-    <div class="slider-container">
-        <img src="0.jpg" alt="El İşi 1">
-        <img src="5.jpg" alt="El İşi 2">
-        <img src="6.jpg" alt="El İşi 3">
-        <img src="9.jpg" alt="El İşi 4">
-        <img src="10.jpg" alt="El İşi 5">
-        <img src="11.jpg" alt="El İşi 6">
-        <img src="16.jpg" alt="El İşi 7">
-        <img src="41.jpg" alt="El İşi 8">
-        <img src="47.jpg" alt="El İşi 9">
-        <img src="48.jpg" alt="El İşi 10">
-        <img src="49.jpg" alt="El İşi 11">
-        <img src="50.jpg" alt="El İşi 12">
-        <img src="51.jpg" alt="El İşi 13">
-        <img src="52.jpg" alt="El İşi 14">
-        <img src="53.jpg" alt="El İşi 15">
-        <img src="57.jpg" alt="El İşi 16">
+    <marquee>Hamuriși satıșı yapmaktayız.</marquee>
+
+    <!-- El İşleri Kaydırıcı -->
+    <div class="image-slider" id="slider2">
+        <button class="prev" onclick="moveSlide(-1, 'slider2')">&#60;&#60;</button>
+        <div class="slider-container">
+            <img src="0.jpg" alt="El İşi 1">
+            <img src="5.jpg" alt="El İşi 2">
+            <img src="6.jpg" alt="El İşi 3">
+            <img src="9.jpg" alt="El İşi 4">
+            <img src="10.jpg" alt="El İşi 5">
+            <img src="11.jpg" alt="El İşi 6">
+            <img src="16.jpg" alt="El İşi 7">
+            <img src="41.jpg" alt="El İşi 8">
+            <img src="47.jpg" alt="El İşi 9">
+            <img src="48.jpg" alt="El İşi 10">
+            <img src="49.jpg" alt="El İşi 11">
+            <img src="50.jpg" alt="El İşi 12">
+            <img src="51.jpg" alt="El İşi 13">
+            <img src="52.jpg" alt="El İşi 14">
+            <img src="53.jpg" alt="El İşi 15">
+            <img src="57.jpg" alt="El İşi 16">
+        </div>
+        <button class="next" onclick="moveSlide(1, 'slider2')">&#62;&#62;</button>
     </div>
-    <button class="next" onclick="moveSlide(1, 'slider2')">&#62;&#62;</button>
+    <marquee>Bireylerin kaliteli vakit geçirmesi ve maddi kazanç sağlamalarında destek oluyoruz.</marquee>
+
+    <!-- Dernek Etkinlik Kaydırıcı -->
+    <div class="image-slider" id="slider3">
+        <button class="prev" onclick="moveSlide(-1, 'slider3')">&#60;&#60;</button>
+        <div class="slider-container">
+            <img src="65.jpg" alt="Etkinlik 1">
+            <img src="66.jpg" alt="Etkinlik 2">
+            <img src="67.jpg" alt="Etkinlik 3">
+            <img src="68.jpg" alt="Etkinlik 4">
+            <!-- Add more images as needed -->
+        </div>
+        <button class="next" onclick="moveSlide(1, 'slider3')">&#62;&#62;</button>
+    </div>
+    <marquee>Engelliler haftası için sayın MAKÜ eğitimci ve öğrencileriyle birlikte gerçekleștirdiğimiz etkinlikten kareler.</marquee>
+
 </div>
-<marquee>Bireylerin kaliteli vakit geçirmesi ve maddi kazanç sağlamalarında destek oluyoruz.</marquee>
-        <body>
-  <body>
-</body>
-  </div>
         
 </body>
     </div>
@@ -654,6 +687,94 @@ function toggleContent() {
     content.style.display = content.style.display === 'none' ? 'block' : 'none';
 }
 
+</script>
+<script>
+    let currentSlide = 0;
+
+    // Slide'ları hareket ettiren fonksiyon
+    function moveSlide(direction, sliderId) {
+        const slider = document.getElementById(sliderId);
+        const slides = slider.querySelectorAll('.slider-container img');
+        const totalSlides = slides.length;
+
+        // Mevcut slide'ı güncelle
+        currentSlide += direction;
+
+        // Eğer son slayta geldiysek, başa dön
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        // Eğer ilk slayta geldiysek, son slayta git
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        }
+
+        // Tüm slaytları gizle
+        for (let i = 0; i < totalSlides; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Geçerli slaytı göster
+        slides[currentSlide].style.display = "block";
+    }
+
+    // Sayfa yüklendiğinde ilk slaytı göster
+    window.onload = function() {
+        const sliders = document.querySelectorAll('.image-slider');
+        sliders.forEach(slider => {
+            const slides = slider.querySelectorAll('.slider-container img');
+            if (slides.length > 0) {
+                slides[0].style.display = "block"; // İlk slaytı göster
+            }
+        });
+    };
+</script>
+<script>
+    let currentSlide = 0;
+
+    function moveSlide(direction, sliderId) {
+        const slider = document.getElementById(sliderId);
+        const slides = slider.querySelectorAll('.slider-container img');
+        const totalSlides = slides.length;
+
+        // Mevcut slaytı gizle
+        slides[currentSlide].style.transform = 'translateX(-100%)'; // Kaydırma efekti
+
+        // Yeni slaytı göster
+        currentSlide += direction;
+
+        // Eğer son slayta geldiysek, başa dön
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        }
+
+        // Eğer ilk slayta geldiysek, son slayta git
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        }
+
+        // Yeni slaytı sıfırdan başlat
+        slides[currentSlide].style.transform = 'translateX(0%)'; // Kaydırma efekti
+
+        // Tüm slaytları gizle ve sadece geçerli slaytı göster
+        for (let i = 0; i < totalSlides; i++) {
+            if (i !== currentSlide) {
+                slides[i].style.transform = 'translateX(100%)'; // Diğer slaytları kaydır
+            }
+        }
+    }
+
+    // Sayfa yüklendiğinde ilk slaytı göster
+    window.onload = function() {
+        const sliders = document.querySelectorAll('.image-slider');
+        sliders.forEach(slider => {
+            const slides = slider.querySelectorAll('.slider-container img');
+            if (slides.length > 0) {
+                slides[0].style.transform = 'translateX(0%)'; // İlk slayt başlangıçta görünür
+            }
+        });
+    };
 </script>
 </body>
 </html>
